@@ -1,5 +1,6 @@
 """
 Purpose: To build Python code for upload to and download from MongoDB
+Author: TLA. Tuan
 """
 import sys
 import os
@@ -57,7 +58,11 @@ class MongoDB:
 	    self.get_db()[self.collection_name].insert_many(dics)
         return None
 
-    def download_df(self, query=None, limit=None, no_id=True, projection=None):
+    def download_df(self, 
+		    query=None, 
+		    limit=None, 
+		    no_id=True, 
+		    projection=None):
         """
         Read from MongoDB and Store it into a df (DataFrame)
         Ex. limit = 100  # number of documents
