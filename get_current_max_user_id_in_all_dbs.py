@@ -17,9 +17,10 @@ def get_current_max_user_id_in_all_dbs(
         
     NOTE: Since we write "UserID" in increase order so the last
     documents in a collection always has its max UserID.
-	
-	Example: UserID = PID0000000009 so user_id = int(0000000009)=9
-	'''
+    Example: UserID = PID0000000009 so user_id = int(0000000009)=9
+    
+    Author: TLA. Tuan
+    '''
 	
     mongodb = MongoClient(host, port)
     db_names = mongodb.list_database_names()  
